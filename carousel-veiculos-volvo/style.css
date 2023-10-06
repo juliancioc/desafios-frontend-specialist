@@ -1,6 +1,7 @@
 body {
     display: flex;
     justify-content: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -22,6 +23,15 @@ header img {
 
 .tabs .tab {
     margin: .5rem;
+    cursor: pointer;
+}
+
+.tab p {
+    margin-bottom: .6rem;
+}
+
+.tabs .active {
+    border-bottom: 2px solid #2A609D;
 }
 
 .container {
@@ -37,10 +47,101 @@ header img {
 .cards {
     display: flex;
     width: 90%;
-    height: 500px;
-    overflow-x: scroll;
+    overflow: hidden;
 }
 
+/* CARD */
 .card {
     margin: 1rem;
+}
+
+.card .model-type {
+    font-size: 12px;
+    font-weight: bold;
+    color: #707070;
+}
+
+.card .title .car-name {
+    font-weight: bold;
+    margin: 0 5px 0 0;
+}
+
+.card .title .electric {
+    color: #ACACAC;
+    margin: 0;
+}
+
+.card .title {
+    display: flex;
+}
+
+.content-price {
+    display: flex;
+    font-size: 12px;
+}
+
+.content-price .text-price {
+    color: #ACACAC;
+    margin-right: 5px;
+}
+
+.actions {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: #2A609D;
+}
+
+.actions .get-to-know {
+    margin-right: 1rem;
+}
+
+.actions p {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.arrow-right {
+    border: solid #2A609D;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+/* SCROLL */
+.scroll {
+    width: 90%;
+    display: flex;
+    justify-content: end;
+    margin-top: 2rem;
+}
+
+.scroll button {
+    border-radius: 50%;
+    height: 48px;
+    width: 48px;
+    border: 1px solid #C4C4C4;
+    cursor: pointer;
+    margin-right: 12px;
+}
+
+.scroll button .icon {
+    border: solid #C4C4C4;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 5px;
+}
+
+.scroll button .right {
+    -webkit-transform: rotate(-45deg);
+}
+
+.scroll button .left {
+    -webkit-transform: rotate(130deg);
+}
+
+.btn-disabled {
+    cursor: not-allowed !important;
 }

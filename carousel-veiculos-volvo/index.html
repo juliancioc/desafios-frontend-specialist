@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap"
+          rel="stylesheet">
     <title>Front-end Specialist</title>
 </head>
 <body>
@@ -18,13 +22,13 @@
     </div>
 
     <div class="tabs">
-        <div class="tab all-models">
+        <div id="tabAllModels" class="tab active all-models">
             <p>Todos (6)</p>
         </div>
-        <div class="tab all-models">
-            <p>Todos (5)</p>
+        <div id="tabSuv" class="tab all-models">
+            <p>SUV (5)</p>
         </div>
-        <div class="tab all-models">
+        <div id="tabCrossover" class="tab all-models">
             <p>Crossover (1)</p>
         </div>
     </div>
@@ -32,72 +36,92 @@
     <div id="listCards" class="cards">
         <div class="card">
             <p class="model-type">SUV</p>
-            <div>
-                <p class="title">EX30</p>
-                <span>100% elétrico</span>
+            <div class="title">
+                <p class="car-name">EX30</p>
+                <p class="electric">100% elétrico</p>
             </div>
             <div class="content-price">
-                <span>Compre a partir de </span>
+                <p class="text-price">Compre a partir de </p>
                 <p class="price"> R$ 219.950</p>
             </div>
             <img src="assets/cars/ex30.png" alt="carro ex30"/>
             <div class="actions">
-                <p class="get-to-know">Conheça</p>
-                <p class="reserve">Reserve</p>
+                <p class="get-to-know">Conheça <i class="arrow-right"></i></p>
+                <p class="reserve">Reserve <i class="arrow-right"></i></p>
             </div>
         </div>
         <div class="card">
             <p class="model-type">SUV</p>
-            <div>
-                <p class="title">EX30</p>
-                <span>100% elétrico</span>
+            <div class="title">
+                <p class="car-name">EXVolvo EX9030</p>
+                <p class="electric">100% elétrico</p>
             </div>
             <div class="content-price">
-                <span>Compre a partir de </span>
-                <p class="price"> R$ 219.950</p>
+                <p class="text-price">Compre a partir de </p>
+                <p class="price"> R$ 549.950</p>
             </div>
-            <img src="assets/cars/ex30.png" alt="carro ex30"/>
+            <img src="assets/cars/exVolvo.png" alt="carro exVolvo"/>
             <div class="actions">
-                <p class="get-to-know">Conheça</p>
-                <p class="reserve">Reserve</p>
+                <p class="get-to-know">Conheça <i class="arrow-right"></i></p>
+                <p class="reserve">Reserve <i class="arrow-right"></i></p>
             </div>
         </div>
         <div class="card">
             <p class="model-type">SUV</p>
-            <div>
-                <p class="title">EX30</p>
-                <span>100% elétrico</span>
+            <div class="title">
+                <p class="car-name">XC40 Recharge</p>
+                <p class="electric">100% elétrico</p>
             </div>
             <div class="content-price">
-                <span>Compre a partir de </span>
-                <p class="price"> R$ 219.950</p>
+                <p class="text-price">Compre a partir de </p>
+                <p class="price"> R$ 329.950</p>
             </div>
-            <img src="assets/cars/ex30.png" alt="carro ex30"/>
+            <img src="assets/cars/xc40.png" alt="carro xc40"/>
             <div class="actions">
-                <p class="get-to-know">Conheça</p>
-                <p class="reserve">Reserve</p>
+                <p class="get-to-know">Conheça <i class="arrow-right"></i></p>
+                <p class="reserve">Reserve <i class="arrow-right"></i></p>
+            </div>
+        </div>
+        <div class="card">
+            <p class="model-type">CROSSOVER</p>
+            <div class="title">
+                <p class="car-name">C40 Recharge</p>
+                <p class="electric">100% elétrico</p>
+            </div>
+            <div class="content-price">
+                <p class="text-price">Compre a partir de </p>
+                <p class="price"> R$ 429.950</p>
+            </div>
+            <img src="assets/cars/c40.png" alt="carro c40"/>
+            <div class="actions">
+                <p class="get-to-know">Conheça <i class="arrow-right"></i></p>
+                <p class="reserve">Reserve <i class="arrow-right"></i></p>
             </div>
         </div>
         <div class="card">
             <p class="model-type">SUV</p>
-            <div>
-                <p class="title">EX30</p>
-                <span>100% elétrico</span>
+            <div class="title">
+                <p class="car-name">EX30</p>
+                <p class="electric">100% elétrico</p>
             </div>
             <div class="content-price">
-                <span>Compre a partir de </span>
+                <p class="text-price">Compre a partir de </p>
                 <p class="price"> R$ 219.950</p>
             </div>
             <img src="assets/cars/ex30.png" alt="carro ex30"/>
             <div class="actions">
-                <p class="get-to-know">Conheça</p>
-                <p class="reserve">Reserve</p>
+                <p class="get-to-know">Conheça <i class="arrow-right"></i></p>
+                <p class="reserve">Reserve <i class="arrow-right"></i></p>
             </div>
         </div>
     </div>
     <div class="scroll">
-        <button id="btnPrevious" class="btn-previous">Anterior</button>
-        <button id="btnNext" class="btn-next">Próximo</button>
+        <button id="btnPrevious" class="btn-previous">
+            <i class="icon left"></i>
+        </button>
+        <button id="btnNext" class="btn-next">
+            <i class="icon right"></i>
+        </button>
     </div>
 </div>
 <script src="script.js"></script>
